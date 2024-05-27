@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sedgwick+Ave&display=swap');
+
+@font-face {
+    font-family: 'Playlist';
+    src: url('fonts/Playlist-Script.woff2') format('woff2'),
+         url('fonts/Playlist-Script.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.stage {
+    padding: 0 10%;
+}
+
+.container {
+    max-width: 1140px;
+    margin: auto;
+}
+
+/* INICIO MENU */
+
+nav {
+    background-color: aqua;
+    padding: 0 !important;
+    display: grid;
+    grid-template-columns: 30% 40% 30%;
+}
+
+nav > div {
+    border: 1px blue dashed;
+    display: flex;
+    align-items: center;
+    height: 10vh;
+}
+
+.logo {
+    height: 70%;
+}
+
+/* FIM MENU */
+
+/* INICIO HERO */
+
+main {
+    height: 80vh;
+    background-color: antiquewhite;
+}
+
+.hero {
+    background-color: black;
+    height: 100%;
+}
