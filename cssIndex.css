@@ -1,61 +1,240 @@
+/* css insur.news */
+
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Sedgwick+Ave&display=swap');
-
-@font-face {
-    font-family: 'Playlist';
-    src: url('fonts/Playlist-Script.woff2') format('woff2'),
-         url('fonts/Playlist-Script.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
-}
-
 
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
 }
 
-.stage {
-    padding: 0 10%;
+.container-fluid {
+    padding: 0 5%;
+    background-color: rgb(244, 244, 244);
 }
 
 .container {
-    max-width: 1140px;
+    max-width: 1320px;
     margin: auto;
+}
+
+.tag {
+    border-radius: 15px;
+    padding: 5px 15px;
+    font-size: 0.8rem;
+    color: white;
+    margin-bottom: 20px;
+}
+
+.tagPress {
+    background-color: brown;
+}
+
+.tagExclusiva {
+    background-color: blue;
+}
+
+.tagEventos {
+    background-color: orange;
+    margin-left: 10px;
+
+}
+
+.Titulo {
+    font-weight: 900;
+    margin-bottom: 10px;
+}
+
+.SubTitulo {
+    font-weight: 300;
 }
 
 /* INICIO MENU */
 
-nav {
-    background-color: aqua;
-    padding: 0 !important;
-    display: grid;
-    grid-template-columns: 30% 40% 30%;
+#menu {
+    background-color: white;
 }
 
-nav > div {
-    border: 1px blue dashed;
-    display: flex;
-    align-items: center;
+.menu {
     height: 10vh;
+    display: grid;
+    grid-template-columns: 20% 80%;
 }
 
 .logo {
-    height: 70%;
+    display: flex;
+    height: 100%;
+    align-items: center;
 }
 
 /* FIM MENU */
 
 /* INICIO HERO */
 
-main {
-    height: 80vh;
-    background-color: antiquewhite;
+#hero {
+    padding: 5%;
 }
 
 .hero {
-    background-color: black;
-    height: 100%;
+    display: grid;
+    grid-template-areas:    "destaque01 destaque02"
+                            "destaque01 destaque03" ;
+    grid-template-columns: 6fr 4fr;
+    gap: 20px;
+    height: 90vh;
 }
+
+@media screen and (max-width: 768px) {
+    .hero {
+        grid-template-areas:    "destaque01 destaque01"
+                                "destaque02 destaque03" ;
+        grid-template-columns: 1fr 1fr;
+        height: 120vh;
+  }
+}
+
+@media screen and (max-width: 480px) {
+    .hero {
+        grid-template-areas:    "destaque01"
+                                "destaque02" 
+                                "destaque03" ;
+        grid-template-columns: 1fr;
+        grid-template-rows: 2fr 1fr 1fr;
+        height: 180vh;
+  }
+}
+
+.hero div {
+    border-radius: 5px;
+    background-color: white;
+}
+
+.destaquePrincipal {
+    grid-area: destaque01;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: start;
+    padding: 0 5% 50px 5%;
+}
+
+.destaqueSecundario01{
+    grid-area: destaque02;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: start;
+    padding: 0 5% 20px 5%;
+}
+
+.destaqueSecundario02{
+    grid-area: destaque03;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: start;
+    padding: 0 5% 20px 5%;
+}
+
+/* FIM HERO */
+
+
+/* INICIO 4 DESTAQUES */
+
+.destaques {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 20px;
+    padding: 0 0 5% 0;
+}
+
+@media screen and (max-width: 768px) {
+    .destaques {
+        grid-template-columns: 1fr 1fr;
+  }
+}
+
+.destaques div {
+    padding: 10% 10%;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: start;
+    background-color: white;
+    border-radius: 5px;
+}
+
+/* FIM 5 DESTAQUES */
+
+
+/* INICIO BANNER */
+
+
+.banner {
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+}
+
+.banner h1 {
+    font-size: 2rem;
+    text-align: center;
+    width: 60%;
+}
+
+.banner h5 {
+    text-align: center;
+    width: 60%;
+}
+
+@media screen and (max-width: 768px) {
+    .banner h1 {
+        width: 100%;
+    }
+    .banner h5 {
+        width: 100%;
+    }
+}
+
+/* FIM BANNER */
+
+
+/* INICIO EVENTOS */
+
+#eventos {
+    padding: 5% 0;
+}
+
+.evento {
+    height: 300px !important;
+    margin: 0 10px;
+    border-radius: 5px;
+    background-color: white;
+}
+
+.custom-prev, .custom-next {
+    background-color: rgb(244, 244, 244);
+    color: black !important;
+    border: none !important;
+    padding: 10px !important;
+    cursor: pointer !important;
+    z-index: 1000 !important;
+}
+.custom-prev {
+    position: absolute;
+    left: -30px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.custom-next {
+    position: absolute;
+    right: -30px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+/* FIM EVENTOS */
