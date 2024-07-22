@@ -226,13 +226,13 @@
 }
 .custom-prev {
     position: absolute;
-    left: -30px;
+    left: -20px;
     top: 50%;
     transform: translateY(-50%);
 }
 .custom-next {
     position: absolute;
-    right: -30px;
+    right: -20px;
     top: 50%;
     transform: translateY(-50%);
 }
