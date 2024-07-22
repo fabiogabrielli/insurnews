@@ -11,7 +11,7 @@
 
 .container-fluid {
     padding: 0 5%;
-    background-color: rgb(244, 244, 244);
+    background-color: rgb(214, 214, 214);
 }
 
 .container {
@@ -206,7 +206,7 @@
 /* INICIO EVENTOS */
 
 #eventos {
-    padding: 5% 0;
+    padding: 5%;
 }
 
 .evento {
@@ -217,7 +217,7 @@
 }
 
 .custom-prev, .custom-next {
-    background-color: rgb(244, 244, 244);
+    background-color: rgba(255, 0, 0, 0) !important;
     color: black !important;
     border: none !important;
     padding: 10px !important;
