@@ -1,59 +1,77 @@
 <?php include "header.php" ?>
+<?php include "conn.php"?>
  
 <!-- HEADER --> 
 
 <header id="menu" class="container-fluid">
     <div class="menu container">
-        <div class="logo"><img src="imgs/insur_news_logo-novo.svg" alt=""></div>
+        <div class="logo"><img src="imgs/insur_news_logo.svg" alt=""></div>
         <nav> link 01 | link 02 | link 03</nav>
     </div>
 </header>
 
 <!-- HERO -->
 
+<?php 
+$sql = "SELECT titulo_news, sub_news, categoria_news FROM news WHERE categoria_news = 'exclusiva' LIMIT 4";
+$resultado = mysqli_query($conecta, $sql);
+
+while ($row = $resultado->fetch_assoc()) {
+    $exclusiva[] = $row;
+}
+
+$sql = "SELECT titulo_news, sub_news, categoria_news FROM news WHERE categoria_news = 'press release' LIMIT 4";
+$resultado = mysqli_query($conecta, $sql);
+
+while ($row = $resultado->fetch_assoc()) {
+    $press[] = $row;
+}
+
+?>
+
 <main id="hero" class="container-fluid">
     <div class="hero container">
         <div class="destaquePrincipal">
-            <span class="tag tagExclusiva">EXCLUSIVA</span>
-            <h1 class="Titulo">Petrobras anuncia aumento de 7,1% na gasolina e de 9,8% no gás de cozinha</h1>
-            <h4 class="SubTitulo">Esse é o primeiro aumento de preços no ano e sob gestão de Magda Chambriard; valores para as distribuidoras passam a valer a partir desta terça-feira (9)</h4>
+            <span class="tag tagExclusiva"><?= $exclusiva[0]["categoria_news"]; ?></span>
+            <h1 class="Titulo"><?= $exclusiva[0]["titulo_news"]; ?></h1>
+            <h4 class="SubTitulo"><?= $exclusiva[0]["sub_news"]; ?></h4>
         </div>
         <div class="destaqueSecundario01">
-            <span class="tag tagExclusiva">EXCLUSIVA</span>
-            <h3 class="Titulo">Petrobras anuncia aumento de 7,1% na gasolina e de 9,8% no gás de cozinha</h3>
-            <h5 class="SubTitulo">Esse é o primeiro aumento de preços no ano e sob gestão de Magda Chambriard; valores para as distribuidoras passam a valer a partir desta terça-feira (9)</h5>
+            <span class="tag tagExclusiva"><?= $exclusiva[1]["categoria_news"]; ?></span>
+            <h3 class="Titulo"><?= $exclusiva[1]["titulo_news"]; ?></h3>
+            <h5 class="SubTitulo"><?= $exclusiva[1]["titulo_news"]; ?></h5>
         </div>
         <div class="destaqueSecundario02">
-            <span class="tag tagPress">PRESS RELEASE</span>
-            <h3 class="Titulo">Petrobras anuncia aumento de 7,1% na gasolina e de 9,8% no gás de cozinha</h3>
-            <h5 class="SubTitulo">Esse é o primeiro aumento de preços no ano e sob gestão de Magda Chambriard; valores para as distribuidoras passam a valer a partir desta terça-feira (9)</h5>
+            <span class="tag tagPress"><?= $press[0]["categoria_news"]; ?></span>
+            <h3 class="Titulo"><?= $press[0]["titulo_news"]; ?></h3>
+            <h5 class="SubTitulo"><?= $press[0]["titulo_news"]; ?></h5>
         </div>    
     </div>
 </main>
 
-<!-- SECTION 5 DESTAQUES -->
+<!-- SECTION 4 DESTAQUES -->
 
 <section class="container-fluid">
     <div class="destaques container">
         <div class="exclusiva01">
-            <span class="tag tagExclusiva">EXCLUSIVA</span>
-            <h3 class="Titulo">Petrobras anuncia aumento de 7,1% na gasolina e de 9,8% no gás de cozinha</h3>
-            <h5 class="SubTitulo">Esse é o primeiro aumento de preços no ano e sob gestão de Magda Chambriard; valores para as distribuidoras passam a valer a partir desta terça-feira (9)</h5>
+            <span class="tag tagExclusiva"><?= $exclusiva[2]["categoria_news"]; ?></span>
+            <h3 class="Titulo"><?= $exclusiva[2]["titulo_news"]; ?></h3>
+            <h5 class="SubTitulo"><?= $exclusiva[2]["titulo_news"]; ?></h5>
         </div>
         <div class="exclusiva02">
-            <span class="tag tagExclusiva">EXCLUSIVA</span>
-            <h3 class="Titulo">Petrobras anuncia aumento de 7,1% na gasolina e de 9,8% no gás de cozinha</h3>
-            <h5 class="SubTitulo">Esse é o primeiro aumento de preços no ano e sob gestão de Magda Chambriard; valores para as distribuidoras passam a valer a partir desta terça-feira (9)</h5>
+            <span class="tag tagExclusiva"><?= $exclusiva[3]["categoria_news"]; ?></span>
+            <h3 class="Titulo"><?= $exclusiva[3]["titulo_news"]; ?></h3>
+            <h5 class="SubTitulo"><?= $exclusiva[3]["titulo_news"]; ?></h5>
         </div>
         <div class="press01">
-            <span class="tag tagPress">PRESS RELEASE</span>
-            <h3 class="Titulo">Petrobras anuncia aumento de 7,1% na gasolina e de 9,8% no gás de cozinha</h3>
-            <h5 class="SubTitulo">Esse é o primeiro aumento de preços no ano e sob gestão de Magda Chambriard; valores para as distribuidoras passam a valer a partir desta terça-feira (9)</h5>
+            <span class="tag tagPress"><?= $press[1]["categoria_news"]; ?></span>
+            <h3 class="Titulo"><?= $press[1]["titulo_news"]; ?></h3>
+            <h5 class="SubTitulo"><?= $press[1]["titulo_news"]; ?></h5>
         </div>
         <div class="press02">
-            <span class="tag tagPress">PRESS RELEASE</span>
-            <h3 class="Titulo">Petrobras anuncia aumento de 7,1% na gasolina e de 9,8% no gás de cozinha</h3>
-            <h5 class="SubTitulo">Esse é o primeiro aumento de preços no ano e sob gestão de Magda Chambriard; valores para as distribuidoras passam a valer a partir desta terça-feira (9)</h5>
+            <span class="tag tagPress"><?= $press[2]["categoria_news"]; ?></span>
+            <h3 class="Titulo"><?= $press[2]["titulo_news"]; ?></h3>
+            <h5 class="SubTitulo"><?= $press[2]["titulo_news"]; ?></h5>
         </div>
     </div>
 </section>
@@ -61,10 +79,11 @@
 <!-- BANNER -->
 
 <section class="banner container-fluid">
-    <span class="tag tagPress">PRESS RELEASE</span>
-    <h1 class="Titulo">Petrobras anuncia aumento de 7,1% na gasolina e de 9,8% no gás de cozinha</h1>
-    <h5 class="SubTitulo">Esse é o primeiro aumento de preços no ano e sob gestão de Magda Chambriard; valores para as distribuidoras passam a valer a partir desta terça-feira (9)</h5>
+    <span class="tag tagPress"><?= $press[3]["categoria_news"]; ?></span>
+            <h3 class="Titulo"><?= $press[3]["titulo_news"]; ?></h3>
+            <h5 class="SubTitulo"><?= $press[3]["titulo_news"]; ?></h5>
 </section>
+
 
 <!-- EVENTOS -->
 
