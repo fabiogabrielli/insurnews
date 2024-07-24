@@ -39,15 +39,24 @@ while ($row = $resultado->fetch_assoc()) {
         <div class="destaqueSecundario01">
             <span class="tag tagExclusiva"><?= $exclusiva[1]["categoria_news"]; ?></span>
             <h3 class="Titulo"><?= $exclusiva[1]["titulo_news"]; ?></h3>
-            <h5 class="SubTitulo"><?= $exclusiva[1]["titulo_news"]; ?></h5>
+            <h4 class="SubTitulo"><?= $exclusiva[1]["titulo_news"]; ?></h4>
         </div>
         <div class="destaqueSecundario02">
             <span class="tag tagPress"><?= $press[0]["categoria_news"]; ?></span>
             <h3 class="Titulo"><?= $press[0]["titulo_news"]; ?></h3>
-            <h5 class="SubTitulo"><?= $press[0]["titulo_news"]; ?></h5>
+            <h4 class="SubTitulo"><?= $press[0]["titulo_news"]; ?></h4>
         </div>    
     </div>
 </main>
+
+<!-- BANNER -->
+
+<section class="banner container-fluid">
+    <span class="tag tagPress"><?= $press[3]["categoria_news"]; ?></span>
+            <h3 class="Titulo"><?= $press[3]["titulo_news"]; ?></h3>
+            <h4 class="SubTitulo"><?= $press[3]["titulo_news"]; ?></h4>
+</section>
+
 
 <!-- SECTION 4 DESTAQUES -->
 
@@ -56,34 +65,25 @@ while ($row = $resultado->fetch_assoc()) {
         <div class="exclusiva01">
             <span class="tag tagExclusiva"><?= $exclusiva[2]["categoria_news"]; ?></span>
             <h3 class="Titulo"><?= $exclusiva[2]["titulo_news"]; ?></h3>
-            <h5 class="SubTitulo"><?= $exclusiva[2]["titulo_news"]; ?></h5>
+            <h4 class="SubTitulo"><?= $exclusiva[2]["titulo_news"]; ?></h4>
         </div>
         <div class="exclusiva02">
             <span class="tag tagExclusiva"><?= $exclusiva[3]["categoria_news"]; ?></span>
             <h3 class="Titulo"><?= $exclusiva[3]["titulo_news"]; ?></h3>
-            <h5 class="SubTitulo"><?= $exclusiva[3]["titulo_news"]; ?></h5>
+            <h4 class="SubTitulo"><?= $exclusiva[3]["titulo_news"]; ?></h4>
         </div>
         <div class="press01">
             <span class="tag tagPress"><?= $press[1]["categoria_news"]; ?></span>
             <h3 class="Titulo"><?= $press[1]["titulo_news"]; ?></h3>
-            <h5 class="SubTitulo"><?= $press[1]["titulo_news"]; ?></h5>
+            <h4 class="SubTitulo"><?= $press[1]["titulo_news"]; ?></h4>
         </div>
         <div class="press02">
             <span class="tag tagPress"><?= $press[2]["categoria_news"]; ?></span>
             <h3 class="Titulo"><?= $press[2]["titulo_news"]; ?></h3>
-            <h5 class="SubTitulo"><?= $press[2]["titulo_news"]; ?></h5>
+            <h4 class="SubTitulo"><?= $press[2]["titulo_news"]; ?></h4>
         </div>
     </div>
 </section>
-
-<!-- BANNER -->
-
-<section class="banner container-fluid">
-    <span class="tag tagPress"><?= $press[3]["categoria_news"]; ?></span>
-            <h3 class="Titulo"><?= $press[3]["titulo_news"]; ?></h3>
-            <h5 class="SubTitulo"><?= $press[3]["titulo_news"]; ?></h5>
-</section>
-
 
 <!-- EVENTOS -->
 
