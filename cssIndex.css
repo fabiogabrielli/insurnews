@@ -184,23 +184,9 @@ header nav {
     font-weight: 900;
 }
 
-.banner h1 {
-    font-size: 2rem;
-    text-align: center;
-    width: 60%;
-}
-
-.banner h5 {
-    text-align: center;
-    width: 60%;
-}
-
 @media screen and (max-width: 768px) {
-    .banner h1 {
-        width: 100%;
-    }
-    .banner h5 {
-        width: 100%;
+    .efeitoBanner01 {
+    font-size: 3rem;
     }
 }
 
