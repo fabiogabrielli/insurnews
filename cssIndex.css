@@ -9,9 +9,13 @@
     font-family: "Montserrat", sans-serif;
 }
 
+:root {
+    --raio: 10px;
+}
+
 .container-fluid {
     padding: 0 5%;
-    background-color: rgb(214, 214, 214);
+    background-color: rgb(235, 235, 235);
 }
 
 .container {
@@ -20,7 +24,7 @@
 }
 
 .tag {
-    border-radius: 15px;
+    border-radius: 5px;
     padding: 5px 15px;
     font-size: 0.8rem;
     color: white;
@@ -36,19 +40,13 @@
     background-color: blue;
 }
 
-.tagEventos {
-    background-color: orange;
-    margin-left: 10px;
-
-}
-
 .Titulo {
     font-weight: 900;
     margin-bottom: 10px;
 }
 
 .SubTitulo {
-    font-weight: 300;
+    font-weight: 400;
 }
 
 /* INICIO MENU */
@@ -131,7 +129,7 @@ header nav {
 }
 
 .hero div {
-    border-radius: 5px;
+    border-radius: var(--raio);
     background-color: white;
 }
 
@@ -164,45 +162,26 @@ header nav {
 
 /* FIM HERO */
 
-
-/* INICIO 4 DESTAQUES */
-
-.destaques {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    gap: 20px;
-    padding: 5% 0;
-}
-
-@media screen and (max-width: 480px) {
-    .destaques {
-        grid-template-columns: 1fr;
-  }
-}
-
-.destaques div {
-    padding: 10% 10%;
-    display: flex;
-    flex-direction: column;
-    justify-content: end;
-    align-items: start;
-    background-color: white;
-    border-radius: 5px;
-}
-
-/* FIM 5 DESTAQUES */
-
-
 /* INICIO BANNER */
 
 
-.banner {
-    height: 50vh;
+.banner01 {
+    background-image: url('imgs/back_banner01.webp');
+    background-position: center;
+    background-size: cover;
+    height: 60vh;
+}
+
+.efeitoBanner01 {
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 100%);
     display: flex;
-    flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-color: white;
+    color: rgba(255, 255, 255, 0.472);
+    font-size: 4rem;
+    font-weight: 900;
 }
 
 .banner h1 {
@@ -228,17 +207,71 @@ header nav {
 /* FIM BANNER */
 
 
+/* INICIO 4 DESTAQUES */
+
+.destaques {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 20px;
+    padding: 5% 0;
+}
+
+@media screen and (max-width: 768px) {
+    .destaques {
+        grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media screen and (max-width: 600px) {
+    .destaques {
+        grid-template-columns: 1fr;
+  }
+}
+
+.destaques div {
+    padding: 30% 10% 10% 10%;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: start;
+    background-color: white;
+    border-radius: var(--raio);
+}
+
+
+
+/* FIM 4 DESTAQUES */
+
+
+
 /* INICIO EVENTOS */
 
 #eventos {
     padding: 5%;
+    background-color: white;
 }
 
 .evento {
     height: 300px !important;
     margin: 0 10px;
-    border-radius: 5px;
+    border-radius: var(--raio);
     background-color: white;
+    background-color: rgb(235, 235, 235);
+}
+
+.tagEventos {
+    font-size: 0.6rem;
+    padding-left: 10px;
+    margin-bottom: 10px;
+    font-weight: 400;
+}
+
+.titAgenda {
+    color: #009db7;
+    font-size: 2rem;
+    padding-left: 10px;
+    width: 50%;
+    margin-bottom: 20px;
 }
 
 .custom-prev, .custom-next {
@@ -262,4 +295,80 @@ header nav {
     transform: translateY(-50%);
 }
 
+@media screen and (max-width: 600px) {
+    .titAgenda {
+        width: 100%;
+    }
+}
+
 /* FIM EVENTOS */
+
+
+/* INICIO DEMAIS NEWS */
+
+#maisNews > div {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 20px;
+    padding: 5% 0;
+}
+
+.cardNews {
+    height: 350px;
+    background-color: white;
+}
+
+.cardNewsImg {
+    background-image: url('imgs/back_banner01.webp');
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height: 200px;
+}
+
+.cardNews h5{
+    font-size: 0.6rem;
+    margin: 20px 20px 10px 20px;
+    font-weight: 400;
+}
+
+.cardNews h3 {
+    margin: 0 20px 5px 20px;
+    font-weight: 900;
+}
+
+.cardNews h4 {
+    font-weight: 400;
+    margin: 0 20px 5px 20px;
+    font-size: 0.9rem;
+}
+
+@media screen and (max-width: 768px) {
+    #maisNews > div {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    #maisNews > div {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* FIM DEMAIS NEWS */
+
+/* INICIO VAGAS */
+
+#vagas {
+    padding: 5%;
+}
+
+.titVagas {
+    color: #009db7;
+    font-size: 2rem;
+    padding-left: 10px;
+    width: 50%;
+    margin-bottom: 20px;
+}
+
+/* FIM VAGAS */
