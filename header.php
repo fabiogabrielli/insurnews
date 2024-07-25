@@ -6,7 +6,7 @@
     <title>insur(news)</title>
 
     <!-- CSS PROPRIO -->
-    <link rel="stylesheet" href="cssIndex.css" media="all">
+    <link rel="stylesheet" href="cssIndex.css?01" media="all">
 
     <!-- SLICK -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
